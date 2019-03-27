@@ -12,3 +12,6 @@ function doSomething() {
 	var j =1
  }
 }
+
+//테스트 시행
+performanceTest(doSomething)
