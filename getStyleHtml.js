@@ -1,3 +1,5 @@
+//inline 과 internal 스타일 불러옴.
+//external 불가
 const getStyleHtml = function() {
   const styleElements = document.getElementsByTagName('style')
   let html = ''
@@ -9,6 +11,7 @@ const getStyleHtml = function() {
   return html
 }
 
+//inline, internal, external 모두 불러옴.
 const getStyle = function() {
   let styleText = "";
   const styleSheets = document.styleSheets;
