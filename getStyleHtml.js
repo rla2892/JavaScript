@@ -14,10 +14,16 @@ const getStyle = function() {
   const styleSheets = document.styleSheets;
 
   for (let i = 0; i < styleSheets.length; i++) {
-    let cssRules = styleSheets[i].cssRules
-
-    for (let j = 0; j < cssRules.length; j++) {
-      styleText += cssRules[j].cssText;
+    try {
+      let cssRules = styleSheets[i].cssRules
+      for (let j = 0; j < cssRules.length; j++) {
+        styleText += "\n"
+        styleText += cssRules[j].cssText;
+        console.log(i, j)
+      }
+    }
+    catch (e) {
+      continue
     }
   }
 
