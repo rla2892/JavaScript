@@ -8,3 +8,20 @@ const getStyleHtml = function() {
 
   return html
 }
+
+const getStyle = function() {
+  let styleText = "";
+  const styleSheets = document.styleSheets;
+
+  for (let i = 0; i < styleSheets.length; i++) {
+    let cssRules = styleSheets[i].cssRules
+
+    for (let j = 0; j < cssRules.length; j++) {
+      styleText += cssRules[j].cssText;
+    }
+  }
+
+  return styleText
+}
+
+getStyle()
