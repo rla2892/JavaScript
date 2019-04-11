@@ -14,6 +14,7 @@ const getStyleHtml = function() {
 //inline, internal, external 모두 불러옴.
 const getStyle = function() {
   let styleText = "";
+  styleText += "<style>";
   const styleSheets = document.styleSheets;
 
   for (let i = 0; i < styleSheets.length; i++) {
@@ -29,7 +30,9 @@ const getStyle = function() {
       continue
     }
   }
-
+  
+  styleText += "</style>";
+  
   return styleText
 }
 
